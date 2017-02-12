@@ -1,34 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using AnimeCalendar.Views;
+using AnimeCalendar.Views.Base;
+using Prism.Unity;
 using Xamarin.Forms;
 
 namespace AnimeCalendar
 {
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
+	public partial class App : PrismApplication
+	{
+		public App(IPlatformInitializer initializer = null) : base(initializer)
+		{
+		}
 
-            MainPage = new AnimeCalendar.MainPage();
-        }
+		protected override async void OnInitialized()
+		{
+			InitializeComponent();
+			await this.NavigationService.NavigateAsync("/RootPage/NavigationPage/ContractsPage");
+		}
 
-        protected override void OnStart()
-        {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
-        }
-    }
+		protected override void RegisterTypes()
+		{
+			this.Container.RegisterTypeForNavigation<RootPage>();
+			this.Container.RegisterTypeForNavigation<NavigationPage>();
+			this.Container.RegisterTypeForNavigation<ContractsPage>();
+			this.Container.RegisterTypeForNavigation<LeadsPage>();
+			this.Container.RegisterTypeForNavigation<AccountsPage>();
+			this.Container.RegisterTypeForNavigation<OpportunitiesPage>();
+		}
+	}
 }
