@@ -42,17 +42,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\AccountsPage.xaml.cs" />
-    <Compile Include="Views\ContractsPage.xaml.cs" />
-    <Compile Include="Views\LeadsPage.xaml.cs" />
-    <Compile Include="Views\OpportunitiesPage.xaml.cs" />
-    <Compile Include="Views\Base\MainPage.xaml.cs" />
-    <Compile Include="Views\Base\MenuPage.xaml.cs" />
-    <Compile Include="Views\Base\RootPage.xaml.cs" />
-    <Compile Include="ViewModels\MenuItem.cs" />
-    <Compile Include="ViewModels\RootPageViewModel.cs" />
-    <Compile Include="Services\ISQLiteConnectionProvider.cs" />
-    <Compile Include="Businesses\AnimeHeaderItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -79,14 +68,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
-    <None Include="Views\AccountsPage.xaml" />
-    <None Include="Views\ContractsPage.xaml" />
-    <None Include="Views\LeadsPage.xaml" />
-    <None Include="Views\OpportunitiesPage.xaml" />
-    <None Include="Views\Base\MainPage.xaml" />
-    <None Include="Views\Base\MenuPage.xaml" />
-    <None Include="Views\Base\RootPage.xaml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
